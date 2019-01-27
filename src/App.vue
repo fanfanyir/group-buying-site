@@ -1,16 +1,21 @@
 <template>
   <div id="app">
-    <keep-alive exclude="Detail">
-      <router-view/>
-    </keep-alive>
+    <router-view/>
   </div>
 </template>
-
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+  }
 }
 </script>
-
-<style>
+<style lang scoped>
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    justify-content: center;
+    /*color: #2c3e50;*/
+  }
 </style>
