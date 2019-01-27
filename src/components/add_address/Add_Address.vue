@@ -20,9 +20,6 @@
           <label>所在地区</label>
           <input type="text"/>
           <div class="line"></div>
-          <!--<label>街道</label>-->
-          <!--<input type="text"/>-->
-          <!--<div class="line"></div>-->
           <input type="text" placeholder="请填写详细地址"/>
         </form>
       </footer>

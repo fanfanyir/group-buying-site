@@ -8,7 +8,6 @@
         <p>规格选择</p>
         <div v-for="(norm,index) in norms" v-bind:key="norm in norms" @click="choosenorm(index)">{{norm}}</div>
       </div>
-      <!--<input type="button" value="确认选择">-->
       <div id="divsure">确认选择</div>
     </div>
 </template>

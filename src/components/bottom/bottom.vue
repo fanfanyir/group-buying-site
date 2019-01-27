@@ -34,7 +34,6 @@ export default{
       this.$router.push({path: '/index?' + 'user_id=' + this.$route.query.user_id})
     },
     goodslist: function () {
-      alert(this.$route.query.user_id)
       this.$router.push({path: '/goodlist?' + 'user_id=' + this.$route.query.user_id})
     },
     shop: function () {

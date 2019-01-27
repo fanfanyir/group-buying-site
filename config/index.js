@@ -6,20 +6,24 @@ const path = require('path')
 
 module.exports = {
   dev: {
-
+    env: require('./dev.env'),
+    port: 8081,
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
-    // Various Dev Server settings
-    // host: '192.168.0.101', // can be overwritten by process.env.HOST
-    // host: '192.168.0.149', // can be overwritten by process.env.HOST
-    // host: '172.20.10.8',// can be overwritten by process.env.HOST
-    // host: '192.168.43.219',// can be overwritten by process.env.HOST
-    // host: '192.168.0.183',// can be overwritten by process.env.HOST
+    proxyTable: {
+      '/api': {
+        target: 'http://nrpi25.natappfree.cc',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': '/'   //重写接口
+        }
+      }
+    },
+
     host: 'localhost',// can be overwritten by process.env.HOST
-    // host: '192.168.0.200', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    
+    // port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
